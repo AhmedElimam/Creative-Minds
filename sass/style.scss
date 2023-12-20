@@ -1,0 +1,458 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/******* index.css**********/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 230;
+  /* HSL color mode */
+  --primary-color: hsl(var(--hue-color), 69%, 61%);
+  --primary-color-second: hsl(var(--hue-color), 69%, 61%);
+  --primary-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --header-height: 3rem;
+}
+
+.progress-container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  padding: 10px;
+  position: fixed;
+  right: 2%;
+  top: 30%;
+  width: 150px;
+  z-index: 80;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 10px;
+  background-color: #1c344c;
+  transition: height 0.2s;
+}
+
+.percentage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Share Tech', sans-serif;
+
+}
+@keyframes progress {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  --primary-color-second: hsl(var(--hue-color), 30%, 8%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+}
+body::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.94rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+  height: 1000vh;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list grid {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  color: var(--primary-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+a#mode-text {
+  display: none;
+}
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  height: max-content;
+}
+.main-title-demi {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  text-align: center;
+  margin-top: -8rem;
+  z-index: -1;
+  h1{
+    color: #F7F7F7;
+    opacity: 0.4;
+    user-select: none;
+  }
+}
+
+/*==================== NAV ====================*/
+.nav {
+  max-width: 1340px;
+  height: calc(var(--header-height) + 1.5rem);
+  column-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mode-text,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+#mode-text:hover {
+  color: var(--primary-color);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--primary-color);
+}
+
+.nav__menu {
+  margin-left: auto;
+}
+
+.nav__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+}
+.constact-us{
+  margin-top: -4px;
+}
+/*==================== FOOTER ====================*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.footer__container {
+  row-gap: 3.5rem;
+}
+
+.footer__bg {
+  background-color: var(--primary-color-second);
+  padding: 2rem 0 3rem;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer__subtitle {
+  font-size: 0.8rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer__link:hover {
+  color: var(--primary-color-lighter);
+}
+
+.footer__copy {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: 3rem;
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social {
+  color: #fff;
+}
+
+/*==================== Dark Light Button Implementation ====================*/
+.checkbox {
+  display: none;
+}
+
+.switch {
+  align-items: center;
+  background-color: #1C344C;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  height: 34px;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(.7);
+  width: 70px;
+}
+
+.switch .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 22px;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  transform: translateX(0);
+  transition: transform .2s linear;
+  width: 22px;
+}
+
+.checkbox:checked + .switch .ball {
+  transform: translateX(39px);
+}
+
+.fa-moon {
+  color: #ffff;
+}
+
+.fa-sun {
+  color: #fff;
+}
+
+/*==================== Hero CSS CLASSES ====================*/
+.hero-section{
+  background: url(../assets/background.png) 50%/cover no-repeat;
+  display: block;
+  height: auto;
+  left: 0;
+  margin: 0 auto;
+  max-width: 2560px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.space-font{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/*==================== End Hero CSS CLASSES ====================*/
+svg {
+  fill: currentColor;
+  height: auto;
+  max-width: 66vmin;
+  transform-origin: center;
+  width: 400px;
+  margin: 0 auto;
+  color: #000;
+  font-family: sans-serif;
+  min-width: 400px;
+}
+.parnters-containr.m-auto.text-center {
+  background-color: #FFFFFF;
+  transform: rotate(82deg);
+  width: 240px;
+  border-radius: 12rem;
+  height: 240px;
+  box-shadow: 5px 5px 5px 5px #c1c1c1;
+}
+#masterText{
+  transition: 0.4s all ease-in-out;
+}
+.hero-bottom {
+  background: #1c344c;
+  box-shadow: 0 0 27px rgba(0,0,0,.25);
+  height: 100px;
+  left: -242.48px;
+  overflow: hidden;
+  position: relative;
+  top: 3rem;
+  transform: rotate(3.74deg);
+  width: 1928.2px;
+  margin: 0 auto;
+}
+.quote{
+  opacity: 0;
+}
+.intro-textline{
+  overflow-y: hidden;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 22px;
+}
+.play-icon-container.absolute.m-auto.righ-0.left-0 {
+    transform: rotate(40deg);
+    margin-top: 5.8rem;
+    left: 5.5rem;
+}
+.neon-pulse {
+  color: #52C3D6;
+  animation: pulse 1.5s infinite; /* Adjust animation duration as needed */
+    text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #52C3D6,
+  0 0 42px #52C3D6,
+  0 0 82px #52C3D6,
+  0 0 92px #52C3D6,
+  0 0 102px #ffff,
+  0 0 151px #fff;
+
+  &:hover {
+    animation: none; /* Pause animation on hover, optional */
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5; /* Adjust initial and final opacity for the pulsating effect */
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/*==================== protfilio Section ====================*/
+setction.portfollio {
+  position: relative;
+  top: 70rem;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.statictes{
+  border-bottom: 1px solid #c1c1c1;
+
+  li{
+    border-right: 1px solid #c1c1c1;
+
+  }
+}
+/*==================== responsive CSS CLASSES ====================*/
+@media screen and (max-width: 1240px)  {
+  .switcher{
+    display: none;
+  }
+  .main-title-demi{
+  display: none;
+  }
+  img.right-0.left-0.top-0.m-auto.mt-2.absolute {
+    width: 140px;
+    margin-right: 15rem;
+}
+.hero-section{
+  height: auto;
+}
+.hero-bottom{
+  top: 3rem;
+}
+
+}
+
+
