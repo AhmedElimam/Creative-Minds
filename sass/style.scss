@@ -99,6 +99,8 @@ h3,
 h4 {
   color: var(--title-color);
   font-weight: 600;
+  font-family: 'Share Tech', sans-serif;
+
 }
 
 .nav__list grid {
@@ -174,6 +176,7 @@ a#mode-text {
     color: #F7F7F7;
     opacity: 0.4;
     user-select: none;
+    font-size: 11em;
   }
 }
 
@@ -330,13 +333,17 @@ a#mode-text {
 .hero-section{
   background: url(../assets/background.png) 50%/cover no-repeat;
   display: block;
-  height: auto;
+  height: 121vh;
   left: 0;
   margin: 0 auto;
   max-width: 2560px;
-  position: absolute;
+  position: relative;
   right: 0;
-  top: 0;
+  top: -13rem;
+}
+.main-hero-container.m-auto.mt-52 {
+  top: 11rem;
+  position: relative;
 }
 .space-font{
   font-family: 'Space Grotesk', sans-serif;
@@ -372,7 +379,7 @@ svg {
   left: -242.48px;
   overflow: hidden;
   position: relative;
-  top: 3rem;
+  top: 18rem;
   transform: rotate(3.74deg);
   width: 1928.2px;
   margin: 0 auto;
@@ -418,9 +425,9 @@ svg {
 }
 
 /*==================== protfilio Section ====================*/
-setction.portfollio {
+section.portfollio {
   position: relative;
-  top: 70rem;
+  top: 5rem;
   width: 100%;
   display: block;
   margin: 0 auto;
@@ -433,6 +440,94 @@ setction.portfollio {
     border-right: 1px solid #c1c1c1;
 
   }
+}
+.main-parse {
+  @apply border-r-2 mt-4 cursor-pointer;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+
+.main-parse:hover {
+  background-color: #1C344C;
+  color: #F7F7F7;
+}
+
+.hover-logo {
+  @apply absolute ml-80 w-48 opacity-0 transition-all ease-in-out duration-500;
+}
+
+.main-parse:hover .hover-logo {
+  opacity: 1;
+  margin-left: -0.5rem;
+  visibility: visible;
+}
+.item{
+width: 180px;
+height: 110px;
+background: #FFFFFF;
+box-shadow: 7px 6px 17px 4px rgba(0, 0, 0, 0.06);
+border-radius: 10px;
+
+  img{
+    width: 80px !important;
+    margin: 0 auto;
+    top: 1rem;
+    position: relative;
+
+  }
+  &:hover{
+    background: #1c344c;
+    transform: translateY(-5px);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+  }
+}
+.owl-carousel .owl-item{
+  margin-left: 2rem;
+}
+/*==================== About US CSS CLASSES ====================*/
+
+.about-us{
+  background: url(../assets/Aboutus-bg.png) 50%/cover no-repeat;
+  display: block;
+  height: 120vh;
+  left: 0;
+  margin: 0 auto;
+  max-width: 2560px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.main-raw{
+  i{
+    border: 3px solid #EF6376;
+    border-radius: 18rem;
+    width: 35px;
+    padding-left: 5px;
+    padding-top: 3px;
+
+    &:hover{
+      background: #EF6376;
+      transition: 0.3s all ease-in-out;
+      color: #F7F7F7;
+      cursor: pointer;
+    }
+  }
+}
+/*==================== Skils set CSS CLASSES ====================*/
+.programs-set{
+  background: url(../assets/main-skils.png) 50%/cover no-repeat;
+  display: block;
+  height: 120vh;
+  left: 0;
+  margin: 0 auto;
+  max-width: 2560px;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin-top: 25rem;
 }
 /*==================== responsive CSS CLASSES ====================*/
 @media screen and (max-width: 960px)  {

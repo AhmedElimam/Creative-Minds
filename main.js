@@ -121,3 +121,39 @@ gsap.from('.intro-textline', {
     });
   },
 });
+
+//logo pop main animation 
+const tl = gsap.timeline();
+tl.to('#logo-pops', { duration: 0.5, scale: 1.2, repeat:-1, ease: "power0.inOut", })
+.to('#logo-pops', { duration: 0.5, scale: 1, repeat:-1, delay: 0.1, ease: "power0.inOut", });
+
+  //orbit 
+gsap.to(".horn_container", {
+  y: 50, // Adjust the bounce height
+  duration: 1,
+  ease: "power3.inOut",
+  repeat: -1, // Infinite bounce
+  yoyo: true // Bounce back and forth
+});
+
+
+//owl carousle 
+
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  items:5,
+  autoplay:true,
+  autoplayTimeout: 4000,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})

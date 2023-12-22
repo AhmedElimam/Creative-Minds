@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="icon" type="image/x-icon" href="./assets/fav.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/style.css">
     <title>CREATIVE MINDS</title>
@@ -24,7 +25,7 @@
       <nav class="nav container">
         <i class="fa-solid fa-bars text-3xl -mt-2 cursor-pointer" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000" data-aos-easing="ease-in-out"></i>
         <div class="logo-container">
-          <img class="right-0 left-0 top-0 m-auto mt-2 absolute" data-aos="zoom-out"  data-aos-delay="1200" data-aos-duration="1000" data-aos-easing="ease-in-out" src="./assets/logo 1.png" alt="">
+          <img class="right-0 left-0 top-0 m-auto mt-2 absolute" id="logo-pops" src="./assets/logo 1.png" alt="">
         </div>
         <div class="nav__menu flex -mt-2 gap-4" id="nav-menu" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000" data-aos-easing="ease-in-out">
           <div class="flex grid-cols-2 mt-2 switcher">
@@ -90,22 +91,120 @@
                 </div>        
             </section>
 
-            <setction class="portfollio ">
-              <div class="flex grid-cols-4 m-auto relative">
-                <ul class="flex statictes gap-16 ml-56 m-auto text-center text-3xl text-[#76D2DE]">
-                  <li class="counter">410+ <h1 class="block text-xl w-[200px] ">Completed Projects</h1></li>
-                  <li class="counter">17+<h1 class="block text-xl w-[200px] ">Wining Awards</h1></li>
-                  <li class="counter">233+<h1 class="block text-xl w-[200px] ">Happy Clients</h1></li>
-                  <li class="counter">12+<h1 class="block text-xl w-[200px] ">Countries Served</h1></li>
-                </ul>
+            <section class="portfollio ">
+              <!-- component -->
+  <div class="-black h-screen p-5">
+    <div class="row-span-2 grid h-[200px] grid-cols-4  border-b-2">
+      <div class="row-span-2 h-6/6 border-r-2 pl-4 pt-2">
+        <h3 class="font-semibold text-center text-[#49C3D3] text-3xl">410+</h3>
+        <h3 class="font-semibold text-center text-[#71808F] text-xl">Completed Projects</h3>
+      </div>
+      <div class="row-span-2 h-6/6 border-r-2 pl-4 pt-2">
+        <h3 class="font-semibold text-center text-[#49C3D3] text-3xl">17+</h3>
+        <h3 class="font-semibold text-center text-[#71808F] text-xl"> Winning Awards</h3>    
+        </div>
+      <div class="row-span-2 h-6/6 border-r-2 pl-4 pt-2">
+        <h3 class="font-semibold text-center text-[#49C3D3] text-3xl">233+</h3>
+        <h3 class="font-semibold text-center text-[#71808F] text-xl">Happy Clients</h3>    
+        </div>
+      <div class="row-span-2 h-6/6 border-r-2 pl-4 pt-2">
+        <h3 class="font-semibold text-center text-[#49C3D3] text-3xl">12+</h3>
+        <h3 class="font-semibold text-center text-[#71808F] text-xl">Countries Served</h3>  
+          </div>
+    </div>
+
+    <!-- Cost Structure & Revenue Streams  -->
+    <div class="grid h-3/6 grid-cols-3 m-auto">
+      <div class="border-r-2 mt-4 cursor-pointer main-parse">
+        <img src="./assets/Group 3610.png" alt="" class="package mt-2 m-auto">
+        <h1 class="font-semibold mt-4 text-center text-3xl">Unique Desgin</h1>
+        <img src="./assets/Layer 2 1.png" alt="" class="hover-logo absolute ml-[20rem] w-[180px]">
+        <h3 class="font-semibold mt-4 text-center">We provide the best UI/UX Design by following the latest trends of the market.</h3>
+      </div>
+      <div class="border-r-2 mt-4 cursor-pointer main-parse">
+        <img src="./assets/Group 3609.png" alt="" class="package mt-2 m-auto">
+        <h1 class="font-semibold mt-4 text-center text-3xl">Fitting Your Business</h1>
+        <img src="./assets/Layer 2 1.png" alt="" class="hover-logo absolute ml-[20rem] w-[180px]">
+        <h3 class="font-semibold mt-4 text-center">We create and innovate, with us you can guarantee the highly standards of inventions</h3>
+      </div>
+      <div class="border-r-2 mt-4 cursor-pointer main-parse">
+        <img src="./assets/Group 3608.png" alt="" class="package mt-2 m-auto">
+        <h1 class="font-semibold mt-4 text-center text-3xl"> Fresh Ideas</h1>
+        <img src="./assets/Layer 2 1.png" alt="" class="hover-logo absolute ml-[20rem] w-[180px]">
+        <h3 class="font-semibold mt-4 text-center">We create and innovate, with us you can guarantee the highly standards of inventions</h3>
+      </div>
+    </div>
+</div>
+      </section>
+      <section class="about-us">
+        <div class="aboutus-contianer grid grid-cols-2 relative">
+          <img src="./assets/Group_1.png" alt="" class="horn_container mt-[5rem] ml-32">
+          <div class="aboutus-content mt-[7rem] text-2xl text-[#68CBDB]">
+            <h3 class="uppercase">About us</h3>
+            <h1 class="text-5xl text-[#373A3F] w-[500px] mt-2">We Are More Than an Agency</h1>
+            <p class="text-xl text-[#373A3F] w-[550px] mt-12">We create and innovate, with us you can guarantee the
+              highly standards of inventions, We provide the best
+              UI/UX Design by following the latest
+              trends of the market.</p>
+              <div class="check-list">
+                <div class="main-raw mt-8 flex">
+                  <i class="fa-solid fa-check text-[#EF6376] -mt-2 text-xl"></i>
+                  <h4 class="text-xl text-[#373A3F] ml-2">Fresh Ideas For Your Projects.</h4>
+                </div>
+                <div class="main-raw mt-8 flex">
+                  <i class="fa-solid fa-check text-[#EF6376] -mt-2 text-xl"></i>
+                  <h4 class="text-xl text-[#373A3F] ml-2">Unique Designs That Will Like Your Clients</h4>
+                </div>
+                <div class="main-raw mt-8 flex">
+                  <i class="fa-solid fa-check text-[#EF6376] -mt-2 text-xl"></i>
+                  <h4 class="text-xl text-[#373A3F] ml-2">Fitting Your Business Size and Budget.</h4>
+                </div>
+                <div class="lets-talk mt-4">
+                <button class="bg-[#DC2B44] hover:bg-blue-700 w-[140px] text-sm text-white font-bold py-2 px-4 rounded uppercase constact-us">
+                  let's talk <i class="fa-solid fa-circle-play"></i>
+                </button>
               </div>
-            </setction>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills-set mt-8">
+        <div class="Delivering-container">
+          <h1 class="text-center text-6xl text-[#68CBDB]">Delivering</h1>
+          <p class="text-center mt-2 text-5xl w-[700px] m-auto">Your Project With The Newest
+            Technologies Used</p>
+        </div>
+        <div class="owl-carousel owl-theme mt-24">
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (11).png" alt="" class="sponser_logo">
+          </div>
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (17).png" alt="" class="sponser_logo">
+          </div>
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (18).png" alt="" class="sponser_logo">
+          </div>
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (28).png" alt="" class="sponser_logo">
+          </div>
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (37).png" alt="" class="sponser_logo">
+          </div>
+          <div class="item">
+            <img src="./assets/Programming logos and icons by hrhasnai (39).png" alt="" class="sponser_logo">
+          </div>
+      </div>
+      </section>
+      <section class="programs-set">
+
+      </section>
   
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./main.js"></script>
     <script>
