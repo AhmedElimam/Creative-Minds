@@ -30,7 +30,7 @@
   position: fixed;
   right: 2%;
   top: 30%;
-  width: 150px;
+  width: 10px;
   z-index: 80;
 }
 
@@ -332,7 +332,6 @@ a#mode-text {
 /*==================== Hero CSS CLASSES ====================*/
 .hero-section{
   background: url(../assets/background.png) 50%/cover no-repeat;
-  display: block;
   height: 121vh;
   left: 0;
   margin: 0 auto;
@@ -340,6 +339,8 @@ a#mode-text {
   position: relative;
   right: 0;
   top: -13rem;
+  min-height: 840px;
+  max-height: 800px;
 }
 .main-hero-container.m-auto.mt-52 {
   top: 11rem;
@@ -528,6 +529,10 @@ border-radius: 10px;
   right: 0;
   top: 0;
   margin-top: 25rem;
+}
+.button-container {
+  top: -4rem;
+  position: relative;
 }
 /*==================== responsive CSS CLASSES ====================*/
 @media screen and (max-width: 960px)  {
